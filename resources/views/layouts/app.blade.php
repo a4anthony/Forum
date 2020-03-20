@@ -19,6 +19,16 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+        .level {
+            display: flex;
+            align-items: center;
+        }
+
+        .flex {
+            flex: 1;
+        }
+    </style>
 </head>
 
 <body>
@@ -49,6 +59,9 @@
                                     <a class="nav-link" href="/threads?by={{auth()->user()->name}}">My Threads </a>
                                 </li>
                                 @endif
+                                <li>
+                                    <a class="nav-link" href="/threads?popular=1">Popular Threads </a>
+                                </li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
